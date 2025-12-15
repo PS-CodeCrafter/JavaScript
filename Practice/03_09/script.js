@@ -16,6 +16,16 @@ const backpack = {
     left: 26,
     right: 26,
   },
+
+  changeVol: function (vol) {
+    this.volume = vol;
+  },
+  changeColor: function (col) {
+    this.color = col;
+  },
+  changePocketNum: function (num) {
+    this.pocketNum = num;
+  },
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -24,3 +34,12 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+console.log("Volume before:", backpack.volume);
+backpack.changeVol(20)
+console.log("Volume after:", backpack.volume);
+console.log("Color before:", backpack.color);
+backpack.changeColor("white")
+console.log("Color after:", backpack.color);
+console.log("PocketNum before:", backpack.pocketNum);
+backpack.changePocketNum(25)
+console.log("PocketNum after:", backpack.pocketNum);
