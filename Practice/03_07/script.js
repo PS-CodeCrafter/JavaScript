@@ -1,9 +1,31 @@
-/**
- * Practice: Building objects
- *
- * - Create JavaScript objects based on objects in your current environment.
- * - Give each object an identifiable name.
- * - Create properties to describe the objects and set their values.
- * - Find an object that has another object inside of it to create a nested object.
- * - Test your objects in the browser console by accessing the entire object and its specific properties.
- */
+const thermos = {
+  name: "Bottle",
+  color: "White",
+
+  lidOpen: false,
+  toggleLid: function (lidStatus) {
+    this.lidOpen = lidStatus;
+  },
+};
+
+const airPods = {
+  name: "AirPods",
+  color: {
+    case: "Black",
+    pieces: "White",
+  },
+
+  lidOpen: false,
+  toggleLid: function (lidStatus) {
+    this.lidOpen = lidStatus;
+  },
+};
+
+console.log("The thermos object:", thermos);
+console.log("The thermos color:", thermos.color);
+console.log("The thermos lid:", thermos.lidOpen);
+
+console.log("The Airpods object:", airPods);
+console.log("The case color:", airPods.color.case);
+console.log("The airpods color:", airPods.color.pieces);
+console.log("The airpods lid:", airPods.lidOpen);
